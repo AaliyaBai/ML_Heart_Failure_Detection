@@ -1,4 +1,4 @@
-** Project: ML Heart Failure Detection **
+**Project: ML Heart Failure Detection**
 
 Heart failure risk prediction using Python and Streamlit.
 
