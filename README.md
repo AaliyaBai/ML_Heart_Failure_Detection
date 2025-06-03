@@ -66,5 +66,6 @@ This project provides an interactive web application to predict the risk of hear
 - **Model Insights:** Classification report & confusion matrix
 
 **Prediction Categories:**
-- `0`: Low
-
+
+- 0: Low Risk (Survived)
+- 1: High Risk (Deceased)
