@@ -1,106 +1,70 @@
-***Project: ML Heart Failure Detection***
+# 💓 ML Heart Failure Detection
 
+## Overview
 **Heart failure risk prediction using Python and Streamlit.**
 
-This project aims to provide an interactive web application that predicts the risk of heart failure in patients based on clinical data. It helps healthcare professionals or users make informed decisions by analyzing risk factors using a trained machine learning model.
+This project provides an interactive web application to predict the risk of heart failure in patients based on clinical data. It is designed to help healthcare professionals and users make informed decisions about patient care.
 
-🔧 Technical Stack
-Data Processing & Machine Learning: Python (NumPy, Pandas, Scikit-learn)
+---
 
-Web Application: Streamlit
+## 🚀 Technical Stack
 
-Model Serialization: Pickle
+- **Data Processing & Machine Learning:**  
+  Python, NumPy, Pandas, Scikit-learn
 
-Visualization: Streamlit widgets and output tables
+- **Web Application:**  
+  Streamlit
 
-Dataset: Heart Failure Clinical Records Dataset
+- **Model Serialization:**  
+  Pickle
 
-📈 Workflow
-1. Data Ingestion
-Clinical records were loaded from heart_failure_clinical_records_dataset.csv. The dataset includes demographic and health-related features for 299 patients.
+- **Visualization:**  
+  Streamlit widgets & output tables
 
-2. Data Preparation
-Data was cleaned and preprocessed using Pandas. Feature types were corrected, nulls checked, and categorical variables encoded for machine learning.
+- **Dataset:**  
+  Heart Failure Clinical Records Dataset
 
-3. Exploratory Data Analysis (EDA)
-EDA was conducted (not included in app.py, but assumed in the training pipeline) to understand trends in mortality based on features such as:
+---
 
-Ejection fraction
+## 📈 Workflow
 
-Serum creatinine
+1. **Data Ingestion:**  
+   Load clinical records from `heart_failure_clinical_records_dataset.csv` (299 patients).
 
-Age
+2. **Data Preparation:**  
+   Clean and preprocess data (correct feature types, check nulls, encode categorical variables).
 
-High blood pressure
+3. **Exploratory Data Analysis (EDA):**  
+   Analyze trends in mortality based on features like:
+   - Ejection fraction
+   - Serum creatinine
+   - Age
+   - High blood pressure
+   - Anaemia
+   - ...and more
 
-Anaemia, etc.
+4. **Model Training:**  
+   - Train a Random Forest Classifier
+   - Split data into train and test sets
+   - Tune hyperparameters
+   - Generate performance metrics (accuracy, classification report, confusion matrix)
+   - Save the model as `RF_Model_Data.pkl`
 
-4. Model Training
-A Random Forest Classifier was trained using Scikit-learn. Key steps:
+5. **Streamlit App Development:**  
+   The main script (`app.py`) allows users to:
+   - Input 12 clinical parameters via sliders/dropdowns
+   - View real-time predictions (“high” or “low” risk)
+   - See prediction probabilities
+   - Explore model accuracy, classification report, and confusion matrix
 
-Train-test split
+---
 
-Model tuning
+## 🔬 Prediction Model
 
-Performance metrics generation
+- **Algorithm:** Random Forest Classifier
+- **Accuracy:** Displayed in the app (based on test data)
+- **Model Insights:** Classification report & confusion matrix
 
-The model, along with its performance metrics (accuracy, classification report, and confusion matrix), was saved using pickle in RF_Model_Data.pkl.
-
-5. Streamlit App Development
-app.py is the main script for the web interface. It allows users to:
-
-Input 12 clinical parameters via sliders or dropdowns
-
-View real-time predictions (high/low risk)
-
-See prediction probabilities
-
-Explore model accuracy, classification report, and confusion matrix in an expandable section
-
-🔬 Prediction Model
-Algorithm: Random Forest Classifier
-
-Accuracy: Provided in the app (based on test data)
-
-Model Insights: Includes classification report and confusion matrix
-
-Prediction Categories:
-
-0: Low Risk (Survived)
-
-1: High Risk (Deceased)
-
-📊 App Output
-User Inputs
-12 clinical features:
-
-Age
-
-Anaemia
-
-Creatinine Phosphokinase
-
-Diabetes
-
-Ejection Fraction
-
-High Blood Pressure
-
-Platelets
-
-Serum Creatinine
-
-Serum Sodium
-
-Sex
-
-Smoking
-
-Follow-up Time
-
-Model Output
-Risk Prediction: "At risk" or "Not likely to suffer heart failure"
-
-Probability Table: Breakdown of prediction confidence
-
-Model Metrics: Accuracy, classification report, confusion matrix
+**Prediction Categories:**
+- `0`: Low
+
