@@ -1,6 +1,6 @@
-**Project: ML Heart Failure Detection**
+***Project: ML Heart Failure Detection***
 
-Heart failure risk prediction using Python and Streamlit.
+**Heart failure risk prediction using Python and Streamlit.**
 
 This project aims to provide an interactive web application that predicts the risk of heart failure in patients based on clinical data. It helps healthcare professionals or users make informed decisions by analyzing risk factors using a trained machine learning model.
 
